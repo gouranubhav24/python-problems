@@ -1,0 +1,14 @@
+"""the program is to check for whether a given position of knight the other given position of knight is valid or not"""
+x=int(input("enter the position of x "))
+y= int(input("enter the position of y "))
+x1 = int(input('enter the x position of be checked '))
+y1 = int(input('enter the y position of be checked '))
+if (0<x<8) or (0<y<8) or (0<x1<8) or (0<y1<8):
+    if (abs(x-x1)==1 and abs(y-y1)==2) or (abs(x-x1)==2 and abs(y-y1)==1):
+        print(f"{(x1,y1)} is a valid position")
+    else:
+        print(f"{(x1,y1)} is a invalid position")
+
+    
+else:
+    print("the inputs are invalid ")
