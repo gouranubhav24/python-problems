@@ -1,0 +1,39 @@
+"""The Two Sum Problem
+● Problem: Given an array of integers, return the indices of the two numbers that add up
+to a specific target.
+● Example: Input: [2, 7, 11, 15], target = 9, Output: [0, 1]"""
+
+from typing import List
+flag=0
+n=int(input("enter the size of the list"))
+target = int(input("enter the target number"))
+print("enter the elements in list")
+inp=[]
+for i in range(n):
+    ele=int(input())
+    inp.append(ele)
+low =0
+high=0
+sum=0
+while high <n:
+    sum+=inp[high]
+    while sum > target and low < high:
+        sum-=inp[low]
+        low+=1
+    if sum == target:
+        flag=1
+        result=[low,high]
+    high+=1
+
+if flag==0:
+    result=[-1]
+print(result)
+
+
+
+
+
+
+
+
+
